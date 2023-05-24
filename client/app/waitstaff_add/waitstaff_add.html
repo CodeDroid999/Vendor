@@ -1,0 +1,219 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Waitstaff Menu Dashboard</h1>
+    <p class="lead">Welcome to the Waitstaff Menu Dashboard. From here you can find all the available meals.</p>
+  </div>
+</header>
+
+<div class="container">
+  <ul class="nav nav-tabs" role="tablist">
+    <li ng-class="tab == 'main' ? 'active' : ''" ng-click="tab = 'main'"><a href="">Main Menu</a></li>
+    <li ng-class="tab == 'kids' ? 'active' : ''" ng-click="tab = 'kids'"><a href="">Kids Menu</a></li>
+    <li ng-class="tab == 'specials' ? 'active' : ''" ng-click="tab = 'specials'"><a href="">Specials Menu</a></li>
+    <li ng-class="tab == 'dessert' ? 'active' : ''" ng-click="tab = 'dessert'"><a href="">Dessert Menu</a></li>
+    <li ng-class="tab == 'drink' ? 'active' : ''" ng-click="tab = 'drink'"><a href="">Drink Menu</a></li>
+  </ul>
+  <div class="row" ng-show="tab == 'main'">
+    <div class="col-md-4">
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-class="pill_cat == 0 ? 'active' : ''" ng-click="pill_cat = 0"><a href="">This-N-That</a></li>
+        <li ng-class="pill_cat == 1 ? 'active' : ''" ng-click="pill_cat = 1"><a href="">Bar Bites</a></li>
+        <li ng-class="pill_cat == 2 ? 'active' : ''" ng-click="pill_cat = 2"><a href="">Veg-N-Out</a></li>
+        <li ng-class="pill_cat == 3 ? 'active' : ''" ng-click="pill_cat = 3"><a href="">Home Grown Burgers</a></li>
+        <li ng-class="pill_cat == 4 ? 'active' : ''" ng-click="pill_cat = 4"><a href="">Burgers, Wraps and Sandwiches</a></li>
+        <li ng-class="pill_cat == 5 ? 'active' : ''" ng-click="pill_cat = 5"><a href="">Pasta</a></li>
+        <li ng-class="pill_cat == 6 ? 'active' : ''" ng-click="pill_cat = 6"><a href="">Pizza</a></li>
+        <li ng-class="pill_cat == 7 ? 'active' : ''" ng-click="pill_cat = 7"><a href="">Steaks</a></li>
+        <li ng-class="pill_cat == 8 ? 'active' : ''" ng-click="pill_cat = 8"><a href="">Seafood</a></li>
+        <li ng-class="pill_cat == 9 ? 'active' : ''" ng-click="pill_cat = 9"><a href="">Chix n Pork</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group" ng-show="pill_cat == 0"> <!-- This N' That -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">New England Clam Chowder</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Soup of the Day</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Seared Ahi Tuna</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Fried Mooz</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 1"> <!-- Bar Bites -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Turkey Bites</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Bar Chicks</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Bison Bites</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Bar Bites</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 2"> <!-- Veg N' Out -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">App Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Dee's Spinach Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">California Cobb Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Chop House Steak Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Caesar Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 5 ? 'active' : ''" ng-click="pill_meal = 5">Chicken Salad</a>
+        <a class="list-group-item" ng-class="pill_meal == 6 ? 'active' : ''" ng-click="pill_meal = 6">Thai Salad</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 3"> <!-- Home Grown Burgers -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Wagyu (American Kobe)</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Free Range Turkey Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Buffalo Chicken Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">The Berkshire</a>
+        <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Bison (lean & mean)</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 4"> <!-- Burgers, Wraps and Sandwiches -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Hickory Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">The Classic Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Ken's Favorite</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Bacon Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Swiss Burger</a>
+        <a class="list-group-item" ng-class="pill_meal == 5 ? 'active' : ''" ng-click="pill_meal = 5">Turkey Carver Club</a>
+        <a class="list-group-item" ng-class="pill_meal == 6 ? 'active' : ''" ng-click="pill_meal = 6">Choice Chicken Sandwich</a>
+        <a class="list-group-item" ng-class="pill_meal == 7 ? 'active' : ''" ng-click="pill_meal = 7">Chicken Salad Wrap</a>
+        <a class="list-group-item" ng-class="pill_meal == 8 ? 'active' : ''" ng-click="pill_meal = 8">Reuben</a>
+        <a class="list-group-item" ng-class="pill_meal == 9 ? 'active' : ''" ng-click="pill_meal = 9">Grilled Portobello</a>
+        <a class="list-group-item" ng-class="pill_meal == 10 ? 'active' : ''" ng-click="pill_meal = 10">Veggie Hummus Wrap</a>
+        <a class="list-group-item" ng-class="pill_meal == 11 ? 'active' : ''" ng-click="pill_meal = 11">Marina's Sandwich</a>
+        <a class="list-group-item" ng-class="pill_meal == 12 ? 'active' : ''" ng-click="pill_meal = 12">Veggie Burrito</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 5"> <!-- Pasta -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Blackened Chicken Pasta</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Chicken and Broccoli Penne</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Mac-n-Cheese</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Angel Hair</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 6"> <!-- Pizza -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Mac Pizza</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Spinach and Artichoke Pizza</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">White Pizza</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Cheese Pizza</a>
+        <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Bacon Cheeseburger Pizza</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 7"> <!-- Steaks -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">The Ideal N.Y. Strip</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Filet Mignon</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Top Sirloin</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Bourbon Sirloin</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 8"> <!-- Seafood -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Atlantic Salmon</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Swordfish</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Fish-n-Chips</a>
+      </div>
+      <div class="list-group" ng-show="pill_cat == 9"> <!-- Chix n Pork -->
+        <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Santa Fe Chicken</a>
+        <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Baby Back Ribs</a>
+        <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Chicken Marsala</a>
+        <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Chicken Tender Platter</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Meal Options</h3>
+      <div ng-show="tab == 'main' && pill_cat==4 && pill_meal==1" class="btn-group">
+        <h4>Option:</h4>
+        <div class="form-group" ng-class="filled ? 'has-success' : 'has-error' ">
+        <select class="form-control input-lg">
+          <option ng-click="filled = false;">-- Please Choose An Option--</option>
+          <option ng-click="filled = true;">Option 1</option>
+          <option ng-click="filled = true;">Option 2</option>
+          <option ng-click="filled = true;">Option 3</option>
+          <option ng-click="filled = true;">Option 4</option>
+          <option ng-click="filled = true;">Option 5</option>
+        </select>
+      </div>
+      <div ng-show="tab == 'main' && pill_cat==4 && pill_meal==3" class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Bacon <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Add Bacon</a></li>
+          <li><a href="#">Add Extra Bacon</a></li>
+          <li><a href="#">Remove Bacon</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Add Side Bacon</a></li>
+          <li><a href="#">Remove Side Bacon</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="list-group" ng-show="tab == 'kids'">
+    <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Grilled Cheese</a>
+    <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Bar Bites Jr.</a>
+    <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Turkey Corn Dog</a>
+    <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Mac-n-Cheese</a>
+    <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Chick-n</a>
+    <a class="list-group-item" ng-class="pill_meal == 5 ? 'active' : ''" ng-click="pill_meal = 5">Kid's Salad</a>
+    <a class="list-group-item" ng-class="pill_meal == 6 ? 'active' : ''" ng-click="pill_meal = 6">Cheese Pizza</a>
+    <a class="list-group-item" ng-class="pill_meal == 7 ? 'active' : ''" ng-click="pill_meal = 7">Baby Back Ribs</a>
+  </div>
+  <div class="list-group" ng-show="tab == 'dessert'">
+    <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Cheese Cake</a>
+    <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Madagascar Fudge Nut Brownie</a>
+    <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Creme Brulee</a>
+    <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Chocolate Raspberry Cupcake</a>
+    <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Apple Cobbler</a>
+    <a class="list-group-item" ng-class="pill_meal == 5 ? 'active' : ''" ng-click="pill_meal = 5">Chocolate Divine</a>
+  </div>
+  <div class="list-group" ng-show="tab == 'drink'">
+    <a class="list-group-item" ng-class="pill_meal == 0 ? 'active' : ''" ng-click="pill_meal = 0">Grilled Cheese</a>
+    <a class="list-group-item" ng-class="pill_meal == 1 ? 'active' : ''" ng-click="pill_meal = 1">Bar Bites Jr.</a>
+    <a class="list-group-item" ng-class="pill_meal == 2 ? 'active' : ''" ng-click="pill_meal = 2">Turkey Corn Dog</a>
+    <a class="list-group-item" ng-class="pill_meal == 3 ? 'active' : ''" ng-click="pill_meal = 3">Mac-n-Cheese</a>
+    <a class="list-group-item" ng-class="pill_meal == 4 ? 'active' : ''" ng-click="pill_meal = 4">Chick-n</a>
+    <a class="list-group-item" ng-class="pill_meal == 5 ? 'active' : ''" ng-click="pill_meal = 5">Kid's Salad</a>
+    <a class="list-group-item" ng-class="pill_meal == 6 ? 'active' : ''" ng-click="pill_meal = 6">Cheese Pizza</a>
+    <a class="list-group-item" ng-class="pill_meal == 7 ? 'active' : ''" ng-click="pill_meal = 7">Baby Back Ribs</a>
+  </div>
+</div>
+
+<div style="display:none;" class="container">
+  <form>
+  <span>Options: </span>
+  <label>Please type into the box to add an item to the order.</label>
+  <input type="text" class="form-control" placeholder="Just start typing!" ng-model="searchBox"><br>
+  <div style="width:100%;" class="panel panel-default noselect" ng-class="selected ? 'panel-primary' : 'panel-default'" ng-repeat="item in menu | filter:{desc: searchBox} | orderBy:'desc':false">
+    <div class="panel-heading" ng-click="selected = !selected;">
+	  <h3><strong>{{item.category}}</strong>: {{item.desc}}</h3>
+	  </div>
+	  <div class="panel-body" ng-show="selected">
+      <!-- Meal Options -->
+      <h2 ng-if="item.mealoptions">Meal Options:</h2>
+      <div ng-repeat="opt in item.mealoptions">
+        <h3>{{opt.desc}}: </h3>
+        <ul class="nav nav-pills">
+          <span ng-init=""></span>
+          <li ng-repeat="choice in opt.choices" ng-class="active ? 'active' : ''" ng-click="active = !active"><a>
+            {{choice}}
+          </a></li>
+        </ul>
+      </div>
+      <br/ >
+      <!-- Addon Selection -->
+      <h2 ng-if="item.mealaddons">Meal Components: </h2>
+      <div ng-repeat="opt in item.mealaddons">
+        <div class="btn-group">
+          <button type="button" class="btn btn-lg" ng-class="opt.state ? 'btn-danger' : 'btn-success'" ng-click="opt.state = !opt.state;">
+            <span ng-show="opt.state"><i class="glyphicon glyphicon-minus">&nbsp;</i>Remove</span><span ng-hide="opt.state"><i class="glyphicon glyphicon-plus">&nbsp;</i>Add</span>&nbsp;<span>'{{opt.desc}}'</span>
+          </button>
+        </div>
+      </div>
+  	</div>
+    <div class="panel-footer" ng-show="selected">
+			<div class="input-group">
+				<span class="input-group-addon">Additional Instructions: </span>
+				<input type="text" class="form-control">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Add To Order ></button>
+				</span>
+			</div>
+    </div>
+  </div>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
